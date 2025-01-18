@@ -8,3 +8,5 @@ fi
 
 groupname=$1
 
+groupdel $groupname
+  echo "Now group $groupname has been deleted"
