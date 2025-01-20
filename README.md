@@ -28,4 +28,14 @@ To use these scripts:
 2. Navigate to the script directory.
 3. Make the scripts executable:
 
+ chmod +x *.sh
+
+
+4. Run a script with appropriate arguments. For example:
+
+
+    sudo ./create_user.sh newusername user_password
+
+
+
 
