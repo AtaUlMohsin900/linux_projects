@@ -20,4 +20,12 @@ In this repository a collection of shell scripts for managing users and groups o
 3. `delete_group.sh`: Removes a group from the system.
 4. `list_user_groups.sh`: Shows all groups a specific user belongs to.
 
+## Usage
+
+To use these scripts:
+
+1. Clone this repository to your local machine.
+2. Navigate to the script directory.
+3. Make the scripts executable:
+
 
