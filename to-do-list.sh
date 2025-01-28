@@ -26,4 +26,22 @@ case $1 in
         if [ $2 -le 0 ]; then
             echo "Task number must be a positive integer."
             exit 1
-         
+        fi 
+        task_count=$(wc -l < "$TODO_FILE")
+        if [ $2 -gt $task_count ]; then
+            echo "Task number out of range."
+            exit 1
+        fi 
+        sed -i "${2}d" "$TODO_FILE"
+            echo "Task removed successfully."
+            ;;
+    list)
+        if [ -s "$TODO_FILE" ]; then
+            echo "To-Do List:"
+            cat -n "$TODO_FILE"
+        else
+            echo "To-Do List is empty."
+        fi 
+        ;;
+    *)
+        echo "Usage: $0 [add |remove| list] [task_number|task_description]"
