@@ -45,3 +45,6 @@ case $1 in
         ;;
     *)
         echo "Usage: $0 [add |remove| list] [task_number|task_description]"
+        exit 1
+        ;;
+esac
