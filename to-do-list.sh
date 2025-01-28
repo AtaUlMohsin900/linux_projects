@@ -17,4 +17,13 @@ case $1 in
         fi 
         echo "$2" >> "$TODO_FILE"
         echo "Task added successfully."
-        
+        ;;
+        remove)
+        if [ -z "$2" ]; then
+            echo "Please provide a task number."
+            exit 1
+        fi 
+        if [ $2 -le 0 ]; then
+            echo "Task number must be a positive integer."
+            exit 1
+         
